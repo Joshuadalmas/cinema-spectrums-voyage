@@ -17,13 +17,16 @@ const festivalData = {
   }
 };
 
+
+
 const films = [
   {
     id: 1,
     title: "Whispers in the Wind",
     director: "Sofia Martinez",
     runtime: "127 min",
-    poster: "https://images.unsplash.com/photo-1489599147049-1439d7ce4040?w=400&h=600&fit=crop"
+    poster: "https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/whispers-on-the-wind-edward-robert-hughes.jpg"
+
   },
   {
     id: 2,
@@ -88,7 +91,7 @@ const pastHighlights = [
   {
     id: 4,
     type: "image",
-    url: "https://images.unsplash.com/photo-1574267432553-4b4628aa3377?w=800&h=600&fit=crop",
+    url: "https://t3.ftcdn.net/jpg/01/85/55/44/360_F_185554469_T3TrOWPsW8b9BGwBkGCNP2okOkTBDhIX.jpg",
     caption: "Red Carpet Premiere"
   }
 ];
