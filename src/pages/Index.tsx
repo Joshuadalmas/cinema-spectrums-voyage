@@ -6,6 +6,17 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import heroImage from '@/assets/hero-bg.jpg';
 import { Link } from "react-router-dom";
+import ReactDOM from 'react-dom/client';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import App from "src/App";
+
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 
 // Mock data for the festival
 const festivalData = {
