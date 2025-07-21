@@ -1,8 +1,8 @@
 {
+  "homepage": "https://joshuadalmas.github.io/cinema-spectrums-voyage/index.tsx",
   "name": "vite_react_shadcn_ts",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://joshuadalmas.github.io/cinema-spectrums-voyage",
   "type": "module",
   "scripts": {
     "dev": "vite",
