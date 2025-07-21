@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import heroImage from '@/assets/hero-bg.jpg';
+import { Link } from "react-router-dom";
 
 // Mock data for the festival
 const festivalData = {
@@ -146,7 +147,10 @@ const Index = () => {
             <a href="#schedule" className="text-foreground hover:text-primary transition-colors">Schedule</a>
             <a href="#venue" className="text-foreground hover:text-primary transition-colors">Venue</a>
           </div>
-          <Button className="btn-hero">Get Tickets</Button>
+          <Link to="/tickets">
+            <Button className="btn-hero" variant="default">Get Tickets</Button>
+          </Link>
+
         </div>
       </nav>
 
@@ -166,9 +170,10 @@ const Index = () => {
             {festivalData.dates} • {festivalData.location}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center fade-in-delay-2">
-            <Button className="btn-hero text-lg px-8 py-4">
-              Get Tickets
-            </Button>
+            <Link to="/tickets">
+              <Button className="btn-hero text-lg px-8 py-4" variant="default">Get Tickets</Button>
+            </Link>
+
             <Button variant="outline" className="btn-secondary text-lg px-8 py-4">
               View Program
             </Button>
