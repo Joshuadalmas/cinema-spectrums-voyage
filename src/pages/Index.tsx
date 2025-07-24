@@ -1,3 +1,4 @@
+// Index.tsx
 import { useState, useEffect } from 'react';
 import { Calendar, Clock, MapPin, Mail, Phone, Instagram, Twitter, Facebook, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -174,7 +175,7 @@ const Index = () => {
               <Button className="btn-hero text-lg px-8 py-4" variant="default">Get Tickets</Button>
             </Link>
 
-            <Button variant="outline" className="btn-secondary text-lg px-8 py-4">
+            <Button variant="outline" className="hover:bg-yellow-600 btn-secondary text-lg px-8 py-4">
               View Program
             </Button>
           </div>

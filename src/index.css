@@ -76,6 +76,25 @@ All colors MUST be HSL.
   }
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000; /* Black track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #facc15; /* Yellow thumb (Tailwind's yellow-400) */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #fde047; /* Lighter yellow on hover (Tailwind's yellow-300) */
+}
+
+
 @layer components {
   /* Cinematic Button Variants */
   .btn-hero {
