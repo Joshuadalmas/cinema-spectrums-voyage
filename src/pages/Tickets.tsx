@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Star, Calendar, Clock, MapPin, CreditCard } from "lucide-react";
-import PayPalButton from "@/components/PayPalButton"; // Adjust the path as needed
+
 import { useEffect } from "react";
 
 const Tickets = () => {
