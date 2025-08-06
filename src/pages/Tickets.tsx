@@ -8,6 +8,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Star, Calendar, Clock, MapPin, CreditCard } from "lucide-react";
+import PayPalButton from "@/components/PayPalButton"; // Adjust the path as needed
+import { useEffect } from "react";
 
 const Tickets = () => {
   const navigate = useNavigate();
@@ -17,6 +19,18 @@ const Tickets = () => {
     email: "",
     phone: ""
   });
+
+
+  const handlePayPalRedirect = () => {
+  const total = getTotalPrice().toFixed(2);
+
+  // Construct PayPal checkout URL with your PayPal business email or merchant ID
+const paypalUrl = `https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_xclick&business=sb-xvf47a28884936@business.example.com&item_name=CineSpectra%20Tickets&amount=${total}&currency_code=USD`;
+
+  window.open(paypalUrl, "_blank");
+};
+
+
 
   const ticketTypes = [
     {
@@ -305,10 +319,19 @@ const Tickets = () => {
                     <span>Total</span>
                     <span className="text-yellow-400">${getTotalPrice()}</span>
                   </div>
-                  <Button className="w-full mt-4 bg-yellow-500 text-black hover:bg-yellow-400">
+                  <Button
+                    className="w-full mt-4 bg-yellow-500 text-black hover:bg-yellow-400"
+                    onClick={() => {
+                      const total = getTotalPrice();
+                      const paypalUrl = `https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_xclick&business=sb-xvf47a28884936@business.example.com&item_name=CineSpectra%20Tickets&amount=${total}&currency_code=USD&return=http://localhost:8080/&cancel_return=http://localhost:8080/`;
+                      window.location.href = paypalUrl;
+                    }}
+                  >
                     <CreditCard className="w-5 h-5 mr-2" />
                     Proceed to Payment
                   </Button>
+
+
                 </CardContent>
               </Card>
             </>
